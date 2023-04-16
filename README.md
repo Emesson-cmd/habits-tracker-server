@@ -1,0 +1,1 @@
+Server application using NestJS, prisma, zod, fastify and dayjs to track personal habits
