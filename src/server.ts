@@ -1,6 +1,7 @@
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
 import { appRoutes } from './routes';
+import { notificationRoutes } from './notifications-routes';
 
 const app = Fastify();
 //res.header('Access-Control-Allow-Origin', '*');
@@ -11,6 +12,7 @@ app.register(cors, {
   allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept',
 });
 app.register(appRoutes);
+app.register(notificationRoutes);
 
 app
   .listen({
